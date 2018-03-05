@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   },
   author: {
     color: '#999',
-    fontSize: 16,
+    fontSize: 15,
   },
   description: {
     color: '#666',
@@ -26,11 +26,11 @@ const styles = StyleSheet.create({
     shadowColor: '#eee',
     shadowOpacity: 0.8,
     shadowRadius: 2,
-    elevation: 5,
+    elevation: 3,
   },
   division: {
-    borderWidth: .2,
-    backgroundColor: '#eee',
+    borderWidth: 1,
+    backgroundColor: '#fefefe',
     marginVertical: 8,
   }
 });

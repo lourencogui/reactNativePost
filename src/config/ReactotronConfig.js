@@ -1,8 +1,8 @@
-import Reactotron from 'reactotron-react-native'
+import Reactotron from 'reactotron-react-native';
 
 const tron = Reactotron
-.configure()
-.useReactNative()
-.connect();
+  .configure()
+  .useReactNative()
+  .connect();
 
 console.tron = tron;
