@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
-
+import PropTypes from 'react-native';
 
 const styles = StyleSheet.create({
   header: {
@@ -32,24 +32,28 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     backgroundColor: '#fefefe',
     marginVertical: 8,
-  }
+  },
 });
 
-export default class Post extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.header}>
-          {this.props.title}
-        </Text>
-        <Text style={styles.author}>
-          {this.props.author}
-        </Text>
-        <View style={styles.division}></View>
-        <Text style={styles.description}>
-          {this.props.description}
-        </Text>
-      </View>
-    );
-  }
-}
+const Post = props => (
+  <View style={styles.container}>
+    <Text style={styles.header}>{props.title}</Text>
+    <Text style={styles.author}>{props.author}</Text>
+    <View style={styles.division} />
+    <Text style={styles.description}>{props.description}</Text>
+  </View>
+);
+
+Post.defaultProps = {
+  title: 'Post',
+  author: 'Autor A',
+  description: 'React Native é 10',
+};
+
+Post.propTypes = {
+  title: PropTypes.string,
+  author: PropTypes.string,
+  description: PropTypes.string,
+};
+
+export default Post;
